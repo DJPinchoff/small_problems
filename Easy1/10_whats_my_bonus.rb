@@ -12,10 +12,18 @@ The tests above should print true.
 =end
 
 def calculate_bonus(num, boolean)
-  if !boolean then return 0 end
-  num / 2
+  boolean ? (num / 2) : 0
 end
 
 puts calculate_bonus(2800, true) == 1400
 puts calculate_bonus(1000, false) == 0
 puts calculate_bonus(50000, true) == 25000
+
+=begin
+less rubyish: i first tried this:
+
+def calculate_bonus(num, boolean)
+   if !boolean then return 0 end
+  num / 2
+end
+=end
