@@ -13,8 +13,9 @@ All of the tests above should print true.
 =end
 
 def digit_list(int)
-  int.digits.reverse
+  int.digits.reverse #digits only works in 2.4.1
 end
+
 puts digit_list(12345) == [1, 2, 3, 4, 5]
 puts digit_list(7) == [7]
 puts digit_list(375290) == [3, 7, 5, 2, 9, 0]
